@@ -4,8 +4,17 @@ import ScrollToTop from "./component/scrollToTop";
 import { BackendURL } from "./component/backendURL";
 
 import { Home } from "./pages/home";
-import { Demo } from "./pages/demo";
-import { Single } from "./pages/single";
+import {Calendar} from "./pages/calendar";
+import { Courses } from "./pages/courses";
+import { Login } from "./pages/login";
+import { AgoraFI } from "./pages/agorafi";
+import { EMail } from "./pages/email";
+import { Garden } from "./pages/thegarden";
+import { Profile } from "./pages/profile";
+import { Settings } from "./pages/settings";
+import { About } from "./pages/about";
+
+
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -25,10 +34,17 @@ const Layout = () => {
                 <ScrollToTop>
                     <Navbar />
                     <Routes>
-                        <Route element={<Home />} path="/" />
-                        <Route element={<Demo />} path="/demo" />
-                        <Route element={<Single />} path="/single/:theid" />
-                        <Route element={<h1>Not found!</h1>} />
+                    <Route element={<Login />} path="/" />
+                    <Route element={<Calendar />} path="/calendar" />
+                    <Route element={<Courses />} path="/courses" />
+                    <Route element={<Home />} path="/home" />
+                    <Route element={<AgoraFI />} path="/agorafi" />
+                    <Route element={<EMail />} path="/email" />
+                    <Route element={<Garden />} path="/thegarden" />
+                    <Route element={<Profile />} path="/profile" />
+                    <Route element={<Settings />} path="/settings" />
+                    <Route element={<About />} path="/about" />
+                    <Route element={<h1>Not found!</h1>} />
                     </Routes>
                     <Footer />
                 </ScrollToTop>
